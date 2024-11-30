@@ -1,0 +1,39 @@
+{% load static %}
+
+{% include "core/partials/_navbar.html" %}
+
+
+<h1>{{ category.name }} Kategorisindeki Yazılar</h1>
+
+<h2>Blog Yazıları</h2>
+<ul>
+    {% for post in blog_posts %}
+        <li>
+            <a href="#">{{ post.title }}</a>
+        </li>
+    {% empty %}
+        <li>Bu kategoride henüz blog yazısı yok.</li>
+    {% endfor %}
+</ul>
+
+<h2>Spor Yazıları</h2>
+<ul>
+    {% for post in spor_posts %}
+        <li>
+            <a href="#">{{ post.title }}</a>
+        </li>
+    {% empty %}
+        <li>Bu kategoride henüz spor yazısı yok.</li>
+    {% endfor %}
+</ul>
+
+<h2>Ekonomi Yazıları</h2>
+<ul>
+    {% for post in ekonomi_posts %}
+        <li>
+            <a href="#">{{ post.title }}</a>
+        </li>
+    {% empty %}
+        <li>Bu kategoride henüz ekonomi yazısı yok.</li>
+    {% endfor %}
+</ul>
